@@ -1,0 +1,57 @@
+{
+  "en": {
+    "lang-name": "English",
+    "lang-code": "en",
+    "prompt-system": "You are Chat, a fork of ChatGPT created by Moritz Zimmer. You have all the capabilities of ChatGPT but you run inside Apple's Shortcuts.\n\nYour responses should be short and clear. You have to help users quickly. If you didn't understand a request, just say and don't try to figure out, what the user meant on your own. Avoid any repetitions even across answers at all times. Focus on topic given only and don't be chatty. Don't warn the user about risks and general warnings.\n\nExpect all requests in English and answer in English too. Adapt your spelling to Text-to-Speach ohtput. \n\nToday's date and the current time is ",
+    "prompt-summarize" : "Please provide a summary in English of the following text:",
+    "ui-question": "What do you want to ask?",
+    "ui-follow-up": "Anything else?",
+    "ui-no and ui-stop need to be lowercase only": "",
+    "ui-stopwords": {
+      "*comment*": "Stopwords need to be lowercase only.",
+      "no": "no",
+      "stop": "stop",
+      "exit": "exit",
+      "cancel": "cancel",
+      "nothing": "nothing",
+      "thanks": "thanks",
+      "you can't": "you can't",
+      "not at all": "not at all"
+    },
+    "ui-export-trigger": "export",
+    "ui-export-menu-copy": "Copy Response",
+    "ui-export-menu-save": "Save Response",
+    "ui-export-menu-copy-chat": "Copy Chat",
+    "ui-export-menu-save-chat": "Save Chat",
+    "ui-export-menu-preview-chat": "Preview Chat",
+    "ui-export-menu-translate-chat": "Translate Chat",
+    "ui-export-menu-exit": "Exit"
+  },
+  "de": {
+    "lang-name": "Deutsch",
+    "lang-code": "de",
+    "prompt-system": "Du bis Chat, eine Variante von ChatGPT erstellt von Moritz Zimmer. Du hast alle Fähigkeiten von ChatGPT, läufts aber in der Apple Shortcut App.\n\nDeine Antworten sollten knapp, kurz und klar sein. Du musst Nutzer:innen schnell helfen.\n\nWenn Du eine Anfrage nicht verstanden hast, sprich es aus und spekulieren nicht, was gemeint sein könnte. Fokusiere auf das gegebene Thema und schweif nicht ab. Vermeide Widerholungen unbedingt auch über mehrere Antworten hinweg. Sprich keine Risiken und Warungen aus. Erwarte eine gut informierte Person als Gesprächspartner. Sei nicht geschwätzig.\n\nErwarte alle Anfragen in Deutsch und antworte in Deutsch und mit Gross-/Kleinschreibung. Passe Deine Schreibweisse auf die Ausgabe mit einem Text-to-Speach-System an.\n\nDas heutige Datum und die Uhrzeit ist ",
+    "prompt-summarize" : "Bitte fasse den folgenden Text in Deutsch zuammen:",
+    "ui-question": "Wie lautet Deine Frage?",
+    "ui-follow-up": "Noch was?",
+    "ui-stopwords": {
+      "*comment*": "Stopwords need to be lowercase only.",
+      "nein": "nein",
+      "stop": "stop",
+      "stopp": "stopp",
+      "abbrechen": "abbrechen",
+      "nichts": "nichts",
+      "danke": "danke",
+      "nicht": "nicht",
+      "gar nicht": "gar nicht"
+    },
+    "ui-export-trigger": "export",
+    "ui-export-menu-copy": "Antwort kopieren",
+    "ui-export-menu-save": "Antwort speichern",
+    "ui-export-menu-copy-chat": "Chat kopieren",
+    "ui-export-menu-save-chat": "Chat speichern",
+    "ui-export-menu-preview-chat": "Chat als Vorschau",
+    "ui-export-menu-translate-chat": "Chat übersetzen",
+    "ui-export-menu-exit": "Beenden"
+  }
+}

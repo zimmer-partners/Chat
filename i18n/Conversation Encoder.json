@@ -1,0 +1,22 @@
+{
+  "en": {
+    "lang-name": "English",
+    "lang-code": "en",
+    "ui-yes": "Yes",
+    "ui-no": "No",
+    "ui-playlist-name": "I will create a playlist for you. Enter a name for your new playlist:",
+    "ui-playlist-added": "Playlist created. Songs added to the playlist:",
+    "ui-open-link-question": "Open links from ChatGPT's response? The shortcut will continue to run.",
+    "prompt-summarize" : "Please provide a  summary of the following text:"
+  },
+  "de": {
+    "lang-name": "Deutsch",
+    "lang-code": "de",
+    "ui-yes": "Ja",
+    "ui-no": "Nein",
+    "ui-playlist-name": "Ich werde eine Playlist kreieren. Gib einen Namen an:",
+    "ui-playlist-added": "Playlist erstellt. Anzahl Songs:",
+    "ui-open-link-question": "Links in der Antwort öffnen? Der Kurzbefehl wird fortgesetzt.",
+    "prompt-summarize" : "Bitte fasse den folgenden Text zuammen:"
+  }
+}
