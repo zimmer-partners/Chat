@@ -7,7 +7,7 @@
     "ui-question": "What do you want to ask?",
     "ui-follow-up": "Anything else?",
     "ui-response": "Response",
-    "ui-back-button": "Back to Chat Resonse";
+    "ui-back-button": "Back to Chat Resonse",
     "ui-stopwords": {
       "*comment*": "Stopwords need to be lowercase only.",
       "no": "no",
@@ -36,7 +36,7 @@
     "ui-question": "Wie lautet Deine Frage?",
     "ui-follow-up": "Noch was?",
     "ui-response": "Antwort",
-    "ui-back-button": "Züruck zur Chat-Antwort";
+    "ui-back-button": "Züruck zur Chat-Antwort",
     "ui-stopwords": {
       "*comment*": "Stopwords need to be lowercase only.",
       "nein": "nein",
