@@ -22,9 +22,8 @@ Chat comes with translations for English and German. If you want to contribute o
 
 Version History
 
-13.09.2025, v2.1
+28.09.2025, v2.1
 - Removed Chat Encoder dependency
-- Removed handling special cases
 
 30.08.2025, v2.0
 - Switched to Perplexity
@@ -48,7 +47,7 @@ Version History
 - Internationalization
 - Added German translation 
 
-[Chat ist based on S-GPT by Federico Viticci.]</string>
+[Conversation was derived S-GPT by Federico Viticci.]</string>
 			</dict>
 		</dict>
 		<dict>
@@ -65,8 +64,6 @@ Version History
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
-				<key>CustomOutputName</key>
-				<string>API Key</string>
 				<key>UUID</key>
 				<string>EF354002-5880-4804-888D-60DD9FE93C2E</string>
 				<key>WFTextActionText</key>
@@ -83,7 +80,7 @@ Version History
 					<key>Value</key>
 					<dict>
 						<key>OutputName</key>
-						<string>API Key</string>
+						<string>Text</string>
 						<key>OutputUUID</key>
 						<string>EF354002-5880-4804-888D-60DD9FE93C2E</string>
 						<key>Type</key>
@@ -716,6 +713,249 @@ Version History
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>C3EC62AA-B4EB-4E92-86FE-E0D985BF6F21</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>System</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<false/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>0B337E34-F1FA-4B60-B6C8-C8B05C0213F1</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>C3EC62AA-B4EB-4E92-86FE-E0D985BF6F21</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\"</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\"</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>B2030A2E-4897-4D72-B494-65E28AC5EB68</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Updated Text</string>
+								<key>OutputUUID</key>
+								<string>0B337E34-F1FA-4B60-B6C8-C8B05C0213F1</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\n</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\n</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>93A215F6-DC85-45D6-BE54-578717E87351</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>B2030A2E-4897-4D72-B494-65E28AC5EB68</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\r</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\r</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>EA0A1D4D-79BD-4DCA-B86C-1E777CF71B39</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>93A215F6-DC85-45D6-BE54-578717E87351</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextCaseSensitive</key>
+				<true/>
+				<key>WFReplaceTextFind</key>
+				<string>\t</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\t</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>D9D1C2F4-4E05-409D-8B35-1F8F07373594</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>EA0A1D4D-79BD-4DCA-B86C-1E777CF71B39</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\/</string>
+				<key>WFReplaceTextReplace</key>
+				<string>\\/</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Aktualisierter Text</string>
+						<key>OutputUUID</key>
+						<string>D9D1C2F4-4E05-409D-8B35-1F8F07373594</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Escaped System</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.getvalueforkey</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -1053,56 +1293,6 @@ Version History
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.getitemfromlist</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>CustomOutputName</key>
-				<string>First Request</string>
-				<key>UUID</key>
-				<string>413A8D77-81DC-47CA-A2C6-905E097A141E</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>Type</key>
-						<string>Variable</string>
-						<key>VariableName</key>
-						<string>User Messages</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.text.changecase</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>CustomOutputName</key>
-				<string>Lowercase First Request </string>
-				<key>UUID</key>
-				<string>F5429CFA-DDE3-4EA1-9E51-101F3D510EDA</string>
-				<key>WFCaseType</key>
-				<string>lowercase</string>
-				<key>text</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>First Request</string>
-						<key>OutputUUID</key>
-						<string>413A8D77-81DC-47CA-A2C6-905E097A141E</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.comment</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -1115,6 +1305,8 @@ Version History
 			<string>is.workflow.actions.getitemfromlist</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>CustomOutputName</key>
+				<string>First User Message</string>
 				<key>UUID</key>
 				<string>ACEC3A9A-BB4C-4B45-81AF-2AC0CE36EBA0</string>
 				<key>WFInput</key>
@@ -1147,7 +1339,7 @@ Version History
 							<key>{0, 1}</key>
 							<dict>
 								<key>OutputName</key>
-								<string>Objekt aus Liste</string>
+								<string>First User Message</string>
 								<key>OutputUUID</key>
 								<string>ACEC3A9A-BB4C-4B45-81AF-2AC0CE36EBA0</string>
 								<key>Type</key>
@@ -1323,8 +1515,6 @@ Version History
 			<string>is.workflow.actions.text.replace</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
-				<key>CustomOutputName</key>
-				<string>Escaped User Message I</string>
 				<key>UUID</key>
 				<string>6E7A372D-0AC5-481A-8D33-B135434518ED</string>
 				<key>WFInput</key>
@@ -1371,7 +1561,7 @@ Version History
 							<key>{29, 1}</key>
 							<dict>
 								<key>OutputName</key>
-								<string>Escaped User Message I</string>
+								<string>Aktualisierter Text</string>
 								<key>OutputUUID</key>
 								<string>6E7A372D-0AC5-481A-8D33-B135434518ED</string>
 								<key>Type</key>
@@ -1470,7 +1660,7 @@ Version History
 											<key>{7, 1}</key>
 											<dict>
 												<key>OutputName</key>
-												<string>API Key</string>
+												<string>Text</string>
 												<key>OutputUUID</key>
 												<string>EF354002-5880-4804-888D-60DD9FE93C2E</string>
 												<key>Type</key>
@@ -1683,9 +1873,9 @@ Version History
 																			<key>{0, 1}</key>
 																			<dict>
 																				<key>OutputName</key>
-																				<string>Escaped User Message I</string>
+																				<string>First User Message</string>
 																				<key>OutputUUID</key>
-																				<string>6E7A372D-0AC5-481A-8D33-B135434518ED</string>
+																				<string>ACEC3A9A-BB4C-4B45-81AF-2AC0CE36EBA0</string>
 																				<key>Type</key>
 																				<string>ActionOutput</string>
 																			</dict>
@@ -1840,7 +2030,7 @@ Version History
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>CustomOutputName</key>
-				<string>API Response Content I</string>
+				<string>API Response Content (First)</string>
 				<key>UUID</key>
 				<string>10CBF6FA-D443-4FAF-8B74-5D9F614B45F4</string>
 				<key>WFDictionaryKey</key>
@@ -1888,7 +2078,7 @@ We're not showing it in playlist mode because another alert is shown.</string>
 							<key>{0, 1}</key>
 							<dict>
 								<key>OutputName</key>
-								<string>API Response Content I</string>
+								<string>API Response Content (First)</string>
 								<key>OutputUUID</key>
 								<string>10CBF6FA-D443-4FAF-8B74-5D9F614B45F4</string>
 								<key>Type</key>
@@ -1972,38 +2162,226 @@ We're not showing it in playlist mode because another alert is shown.</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.runworkflow</string>
+			<string>is.workflow.actions.text.replace</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
-				<key>CustomOutputName</key>
-				<string>S-GPT Encoder Result</string>
 				<key>UUID</key>
-				<string>AEE0DC93-965A-41CC-8389-81657AD12A68</string>
+				<string>2CAA3CBC-B757-440E-94C7-CBF2B3FCE75B</string>
 				<key>WFInput</key>
 				<dict>
 					<key>Value</key>
 					<dict>
-						<key>OutputName</key>
-						<string>API Response Content I</string>
-						<key>OutputUUID</key>
-						<string>10CBF6FA-D443-4FAF-8B74-5D9F614B45F4</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>API Response Content (First)</string>
+								<key>OutputUUID</key>
+								<string>10CBF6FA-D443-4FAF-8B74-5D9F614B45F4</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
 					</dict>
 					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
+					<string>WFTextTokenString</string>
 				</dict>
-				<key>WFWorkflow</key>
+				<key>WFReplaceTextFind</key>
+				<string>\</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<false/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>5189144E-6C17-45EA-AD96-67A38526D89C</string>
+				<key>WFInput</key>
 				<dict>
-					<key>isSelf</key>
-					<false/>
-					<key>workflowIdentifier</key>
-					<string>08981C4A-A6CD-4884-ABEC-43BC75D55682</string>
-					<key>workflowName</key>
-					<string>S-GPT Encoder (I18n)</string>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>2CAA3CBC-B757-440E-94C7-CBF2B3FCE75B</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
 				</dict>
-				<key>WFWorkflowName</key>
-				<string>S-GPT Encoder (I18n)</string>
+				<key>WFReplaceTextFind</key>
+				<string>\"</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\"</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>D0963A1C-43D9-45EA-B1E0-80CDE37B7B7A</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Updated Text</string>
+								<key>OutputUUID</key>
+								<string>5189144E-6C17-45EA-AD96-67A38526D89C</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\n</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\n</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>6D2EA57A-83AC-4677-89E0-236B3F0E272E</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>D0963A1C-43D9-45EA-B1E0-80CDE37B7B7A</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\r</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\r</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>6554E3F4-CA1E-4A49-9A91-A95C9B30C404</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>6D2EA57A-83AC-4677-89E0-236B3F0E272E</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextCaseSensitive</key>
+				<true/>
+				<key>WFReplaceTextFind</key>
+				<string>\t</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\t</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>CustomOutputName</key>
+				<string>Escaped API Response (First)</string>
+				<key>UUID</key>
+				<string>1C713488-D06A-4FA7-B3B8-054B835F7DCD</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>6554E3F4-CA1E-4A49-9A91-A95C9B30C404</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\/</string>
+				<key>WFReplaceTextReplace</key>
+				<string>\\/</string>
 			</dict>
 		</dict>
 		<dict>
@@ -2022,9 +2400,9 @@ We're not showing it in playlist mode because another alert is shown.</string>
 							<key>{34, 1}</key>
 							<dict>
 								<key>OutputName</key>
-								<string>S-GPT Encoder Result</string>
+								<string>Escaped API Response (First)</string>
 								<key>OutputUUID</key>
-								<string>AEE0DC93-965A-41CC-8389-81657AD12A68</string>
+								<string>1C713488-D06A-4FA7-B3B8-054B835F7DCD</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 							</dict>
@@ -2070,7 +2448,7 @@ We're not showing it in playlist mode because another alert is shown.</string>
 					<key>Value</key>
 					<dict>
 						<key>OutputName</key>
-						<string>API Response Content I</string>
+						<string>API Response Content (First)</string>
 						<key>OutputUUID</key>
 						<string>10CBF6FA-D443-4FAF-8B74-5D9F614B45F4</string>
 						<key>Type</key>
@@ -2151,6 +2529,8 @@ We're not showing it in playlist mode because another alert is shown.</string>
 			<string>is.workflow.actions.dictatetext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>CustomOutputName</key>
+				<string>Dictation (Looped)</string>
 				<key>UUID</key>
 				<string>BBCCEA9C-6873-4BE8-832B-3AB78CC43732</string>
 				<key>WFSpeechLanguage</key>
@@ -2179,7 +2559,7 @@ We're not showing it in playlist mode because another alert is shown.</string>
 					<key>Value</key>
 					<dict>
 						<key>OutputName</key>
-						<string>Diktierter Text</string>
+						<string>Dictation (Looped)</string>
 						<key>OutputUUID</key>
 						<string>BBCCEA9C-6873-4BE8-832B-3AB78CC43732</string>
 						<key>Type</key>
@@ -2208,7 +2588,7 @@ We're not showing it in playlist mode because another alert is shown.</string>
 					<key>Value</key>
 					<dict>
 						<key>OutputName</key>
-						<string>Diktierter Text</string>
+						<string>Dictation (Looped)</string>
 						<key>OutputUUID</key>
 						<string>BBCCEA9C-6873-4BE8-832B-3AB78CC43732</string>
 						<key>Type</key>
@@ -2487,7 +2867,7 @@ We're not showing it in playlist mode because another alert is shown.</string>
 							<key>{0, 1}</key>
 							<dict>
 								<key>OutputName</key>
-								<string>Diktierter Text</string>
+								<string>Dictation (Looped)</string>
 								<key>OutputUUID</key>
 								<string>BBCCEA9C-6873-4BE8-832B-3AB78CC43732</string>
 								<key>Type</key>
@@ -3114,101 +3494,6 @@ We need to subtract -1 from the total count of user messages.</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.text.replace</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>817AE4D6-9E53-4F04-865B-DA6821BE9328</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>attachmentsByRange</key>
-						<dict>
-							<key>{0, 1}</key>
-							<dict>
-								<key>Type</key>
-								<string>Variable</string>
-								<key>VariableName</key>
-								<string>System</string>
-							</dict>
-						</dict>
-						<key>string</key>
-						<string>￼</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenString</string>
-				</dict>
-				<key>WFReplaceTextFind</key>
-				<string>\"</string>
-				<key>WFReplaceTextRegularExpression</key>
-				<true/>
-				<key>WFReplaceTextReplace</key>
-				<string>\\\"</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.text.replace</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>825F89D8-8740-4ECE-B018-86F8465E5C78</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>attachmentsByRange</key>
-						<dict>
-							<key>{0, 1}</key>
-							<dict>
-								<key>OutputName</key>
-								<string>Updated Text</string>
-								<key>OutputUUID</key>
-								<string>817AE4D6-9E53-4F04-865B-DA6821BE9328</string>
-								<key>Type</key>
-								<string>ActionOutput</string>
-							</dict>
-						</dict>
-						<key>string</key>
-						<string>￼</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenString</string>
-				</dict>
-				<key>WFReplaceTextFind</key>
-				<string>\n</string>
-				<key>WFReplaceTextRegularExpression</key>
-				<true/>
-				<key>WFReplaceTextReplace</key>
-				<string>\\\n</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.setvariable</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Updated Text</string>
-						<key>OutputUUID</key>
-						<string>825F89D8-8740-4ECE-B018-86F8465E5C78</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-				<key>WFVariableName</key>
-				<string>Escaped System</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -3403,7 +3688,7 @@ We need to subtract -1 from the total count of user messages.</string>
 											<key>{7, 1}</key>
 											<dict>
 												<key>OutputName</key>
-												<string>API Key</string>
+												<string>Text</string>
 												<key>OutputUUID</key>
 												<string>EF354002-5880-4804-888D-60DD9FE93C2E</string>
 												<key>Type</key>
@@ -3658,7 +3943,7 @@ We need to subtract -1 from the total count of user messages.</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>CustomOutputName</key>
-				<string>API Message Content II</string>
+				<string>API Message Content (Looped)</string>
 				<key>UUID</key>
 				<string>B6BC9956-5BB2-45EB-8D9F-BAFA293592F5</string>
 				<key>WFDictionaryKey</key>
@@ -3689,7 +3974,7 @@ We need to subtract -1 from the total count of user messages.</string>
 					<key>Value</key>
 					<dict>
 						<key>OutputName</key>
-						<string>API Message Content II</string>
+						<string>API Message Content (Looped)</string>
 						<key>OutputUUID</key>
 						<string>B6BC9956-5BB2-45EB-8D9F-BAFA293592F5</string>
 						<key>Type</key>
@@ -3727,7 +4012,7 @@ We need to subtract -1 from the total count of user messages.</string>
 							<key>{0, 1}</key>
 							<dict>
 								<key>OutputName</key>
-								<string>API Message Content II</string>
+								<string>API Message Content (Looped)</string>
 								<key>OutputUUID</key>
 								<string>B6BC9956-5BB2-45EB-8D9F-BAFA293592F5</string>
 								<key>Type</key>
@@ -3806,50 +4091,231 @@ We need to subtract -1 from the total count of user messages.</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFCommentActionText</key>
-				<string>Check if the output contains links and offer to open them</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.comment</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFCommentActionText</key>
 				<string>Escape the assistant response and continue the loop.</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.runworkflow</string>
+			<string>is.workflow.actions.text.replace</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>UUID</key>
-				<string>11E6F4BE-4447-4641-A24F-25BE1920A918</string>
+				<string>5809AD7F-ED2A-4E6F-B7AA-255A5DF4779D</string>
 				<key>WFInput</key>
 				<dict>
 					<key>Value</key>
 					<dict>
-						<key>OutputName</key>
-						<string>API Message Content II</string>
-						<key>OutputUUID</key>
-						<string>B6BC9956-5BB2-45EB-8D9F-BAFA293592F5</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>API Message Content (Looped)</string>
+								<key>OutputUUID</key>
+								<string>B6BC9956-5BB2-45EB-8D9F-BAFA293592F5</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
 					</dict>
 					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
+					<string>WFTextTokenString</string>
 				</dict>
-				<key>WFWorkflow</key>
+				<key>WFReplaceTextFind</key>
+				<string>\</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<false/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>3B3D628A-455F-4582-A13E-1903EF143CC2</string>
+				<key>WFInput</key>
 				<dict>
-					<key>isSelf</key>
-					<false/>
-					<key>workflowIdentifier</key>
-					<string>08981C4A-A6CD-4884-ABEC-43BC75D55682</string>
-					<key>workflowName</key>
-					<string>S-GPT Encoder (I18n)</string>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>5809AD7F-ED2A-4E6F-B7AA-255A5DF4779D</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
 				</dict>
-				<key>WFWorkflowName</key>
-				<string>S-GPT Encoder (I18n)</string>
+				<key>WFReplaceTextFind</key>
+				<string>\"</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\"</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>802CF336-C895-42F7-8C4B-70B5331A6159</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Updated Text</string>
+								<key>OutputUUID</key>
+								<string>3B3D628A-455F-4582-A13E-1903EF143CC2</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\n</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\n</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>1D32BF56-8E96-4857-9A44-B08C8C902D7E</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>802CF336-C895-42F7-8C4B-70B5331A6159</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\r</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\r</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>ADDBFCFA-B241-461A-AB58-22BCC42DDF1F</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>1D32BF56-8E96-4857-9A44-B08C8C902D7E</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextCaseSensitive</key>
+				<true/>
+				<key>WFReplaceTextFind</key>
+				<string>\t</string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextReplace</key>
+				<string>\\t</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>CustomOutputName</key>
+				<string>Escaped API Response (Looped)</string>
+				<key>UUID</key>
+				<string>CCF5CF0E-ACD6-42CA-B273-B376323E224F</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Aktualisierter Text</string>
+								<key>OutputUUID</key>
+								<string>ADDBFCFA-B241-461A-AB58-22BCC42DDF1F</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>\/</string>
+				<key>WFReplaceTextReplace</key>
+				<string>\\/</string>
 			</dict>
 		</dict>
 		<dict>
@@ -3868,9 +4334,9 @@ We need to subtract -1 from the total count of user messages.</string>
 							<key>{34, 1}</key>
 							<dict>
 								<key>OutputName</key>
-								<string>Kurzbefehlergebnis</string>
+								<string>Escaped API Response (Looped)</string>
 								<key>OutputUUID</key>
-								<string>11E6F4BE-4447-4641-A24F-25BE1920A918</string>
+								<string>CCF5CF0E-ACD6-42CA-B273-B376323E224F</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 							</dict>
@@ -3921,7 +4387,7 @@ We need to subtract -1 from the total count of user messages.</string>
 		</dict>
 	</array>
 	<key>WFWorkflowClientVersion</key>
-	<string>3612.0.2.1</string>
+	<string>3612.0.1.1</string>
 	<key>WFWorkflowHasOutputFallback</key>
 	<false/>
 	<key>WFWorkflowHasShortcutInputVariables</key>
@@ -3987,7 +4453,7 @@ We need to subtract -1 from the total count of user messages.</string>
 	<array/>
 	<key>WFWorkflowTypes</key>
 	<array>
-		<string>ActionExtension</string>
+		<string>Watch</string>
 	</array>
 </dict>
 </plist>

@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>WFQuickActionSurfaces</key>
-	<array>
-		<string>Services</string>
-	</array>
+	<array/>
 	<key>WFWorkflowActions</key>
 	<array>
 		<dict>
@@ -14,7 +12,7 @@
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFCommentActionText</key>
-				<string>Chat is a set of Shortcuts adding system wide access to an AI Chat on Apple devices missing support for Apple  Intelligence and Conversational Siri requests. By leveraging the Perplexity API it's super cost efficient; you can run months for a few dollars with no Pro account needed. Both "Chat" and "Conversation" need "Chat Encoder" to run.
+				<string>Chat is a set of Shortcuts adding system wide access to an AI Chat on Apple devices missing support for Apple Intelligence and Conversational Siri requests. By leveraging the Perplexity API it's super cost efficient; you can run months for a few dollars without a Pro account needed. Both "Chat" and "Conversation" need "Chat Encoder" to run.
 
 Chat provides integration as a Lock Screen Widget, Control Center Action and can be added to the Home Screen. Its user interface of Chat does not block any further processes on the device and request are processed in the background.
 
@@ -23,6 +21,9 @@ Conversation is optimized for voice input and should be triggered through Siri. 
 Chat comes with translations for English and German. If you want to contribute other languages, feel free to contact Moritz.
 
 Version History
+
+28.09.2025, v2.1
+- Introduced Mini Browser
 
 30.08.2025, v2.0
 - Switched to Perplexity
@@ -227,60 +228,62 @@ If you have access to it, replace this with gpt-4.</string>
 				<key>WFTextActionText</key>
 				<string>{
   "en": {
-    "lang-name": "English",
-    "lang-code": "en",
-    "prompt-system": "You are Chat, a fork of ChatGPT created by Moritz Zimmer. You have all the capabilities of ChatGPT but you run inside Apple's Shortcuts.\n\nYour responses should be short and clear. You have to help users quickly. If you didn't understand a request, just say and don't try to figure out, what the user meant on your own. Avoid any repetitions even across answers at all times. Focus on topic given only and don't be chatty. Don't warn the user about risks and general warnings.\n\nExpect all requests in English and answer in English too. Adapt your spelling to Text-to-Speach ohtput. \n\nToday's date and the current time is ",
-    "prompt-summarize" : "Please provide a summary in English of the following text:",
-    "ui-question": "What do you want to ask?",
-    "ui-follow-up": "Anything else?",
-    "ui-response": "Response",
-    "ui-stopwords": {
-      "*comment*": "Stopwords need to be lowercase only.",
-      "no": "no",
-      "stop": "stop",
-      "exit": "exit",
-      "cancel": "cancel",
-      "nothing": "nothing",
-      "thanks": "thanks",
-      "you can't": "you can't",
-      "not at all": "not at all"
-    },
-    "ui-export-trigger": "export",
-    "ui-export-menu-copy": "Copy Response",
-    "ui-export-menu-save": "Save Response",
-    "ui-export-menu-copy-chat": "Copy Chat",
-    "ui-export-menu-save-chat": "Save Chat",
-    "ui-export-menu-preview-chat": "Preview Chat",
-    "ui-export-menu-translate-chat": "Translate Chat",
-    "ui-export-menu-exit": "Exit"
+	"lang-name": "English",
+	"lang-code": "en",
+	"prompt-system": "You are Chat, a fork of ChatGPT created by Moritz Zimmer. You have all the capabilities of ChatGPT but you run inside Apple's Shortcuts.\n\nYour responses should be short and clear. You have to help users quickly. If you didn't understand a request, just say and don't try to figure out, what the user meant on your own. Avoid any repetitions even across answers at all times. Focus on topic given only and don't be chatty. Don't warn the user about risks and general warnings.\n\nExpect all requests in English and answer in English too. Adapt your spelling to Text-to-Speach ohtput. \n\nToday's date and the current time is ",
+	"prompt-summarize" : "Please provide a summary in English of the following text:",
+	"ui-question": "What do you want to ask?",
+	"ui-follow-up": "Anything else?",
+	"ui-response": "Response",
+	"ui-back-button": "Back to Chat Resonse",
+	"ui-stopwords": {
+	  "*comment*": "Stopwords need to be lowercase only.",
+	  "no": "no",
+	  "stop": "stop",
+	  "exit": "exit",
+	  "cancel": "cancel",
+	  "nothing": "nothing",
+	  "thanks": "thanks",
+	  "you can't": "you can't",
+	  "not at all": "not at all"
+	},
+	"ui-export-trigger": "export",
+	"ui-export-menu-copy": "Copy Response",
+	"ui-export-menu-save": "Save Response",
+	"ui-export-menu-copy-chat": "Copy Chat",
+	"ui-export-menu-save-chat": "Save Chat",
+	"ui-export-menu-preview-chat": "Preview Chat",
+	"ui-export-menu-translate-chat": "Translate Chat",
+	"ui-export-menu-exit": "Exit"
   },
   "de": {
-    "lang-name": "Deutsch",
-    "lang-code": "de",
-    "prompt-system": "Du bis Chat, eine Variante von ChatGPT erstellt von Moritz Zimmer. Du hast alle Fähigkeiten von ChatGPT, läufts aber in der Apple Shortcut App.\n\nDeine Antworten sollten knapp, kurz und klar sein. Du musst Nutzer:innen schnell helfen.\n\nWenn Du eine Anfrage nicht verstanden hast, sprich es aus und spekulieren nicht, was gemeint sein könnte. Fokusiere auf das gegebene Thema und schweif nicht ab. Vermeide Widerholungen unbedingt auch über mehrere Antworten hinweg. Sprich keine Risiken und Warungen aus. Erwarte eine gut informierte Person als Gesprächspartner. Sei nicht geschwätzig.\n\nErwarte alle Anfragen in Deutsch und antworte in Deutsch und mit Gross-/Kleinschreibung. Passe Deine Schreibweisse auf die Ausgabe mit einem Text-to-Speach-System an.\n\nDas heutige Datum und die Uhrzeit ist ",
-    "prompt-summarize" : "Bitte fasse den folgenden Text in Deutsch zuammen:",
-    "ui-question": "Wie lautet Deine Frage?",
-    "ui-follow-up": "Noch was?",
-    "ui-response": "Antwort",
-    "ui-stopwords": {
-      "*comment*": "Stopwords need to be lowercase only.",
-      "nein": "nein",
-      "stop": "stop",
-      "stopp": "stopp",
-      "abbrechen": "abbrechen",
-      "nichts": "nichts",
-      "danke": "danke",
-      "nicht": "nicht",
-      "gar nicht": "gar nicht"
-    },
-    "ui-export-trigger": "export",
-    "ui-export-menu-copy": "Antwort kopieren",
-    "ui-export-menu-save": "Antwort speichern",
-    "ui-export-menu-copy-chat": "Chat kopieren",
-    "ui-export-menu-save-chat": "Chat speichern",
-    "ui-export-menu-preview-chat": "Chat als Vorschau",
-    "ui-export-menu-translate-chat": "Chat übersetzen",
-    "ui-export-menu-exit": "Beenden"
+	"lang-name": "Deutsch",
+	"lang-code": "de",
+	"prompt-system": "Du bis Chat, eine Variante von ChatGPT erstellt von Moritz Zimmer. Du hast alle Fähigkeiten von ChatGPT, läufts aber in der Apple Shortcut App.\n\nDeine Antworten sollten knapp, kurz und klar sein. Du musst Nutzer:innen schnell helfen.\n\nWenn Du eine Anfrage nicht verstanden hast, sprich es aus und spekulieren nicht, was gemeint sein könnte. Fokusiere auf das gegebene Thema und schweif nicht ab. Vermeide Widerholungen unbedingt auch über mehrere Antworten hinweg. Sprich keine Risiken und Warungen aus. Erwarte eine gut informierte Person als Gesprächspartner. Sei nicht geschwätzig.\n\nErwarte alle Anfragen in Deutsch und antworte in Deutsch und mit Gross-/Kleinschreibung. Passe Deine Schreibweisse auf die Ausgabe mit einem Text-to-Speach-System an.\n\nDas heutige Datum und die Uhrzeit ist ",
+	"prompt-summarize" : "Bitte fasse den folgenden Text in Deutsch zuammen:",
+	"ui-question": "Wie lautet Deine Frage?",
+	"ui-follow-up": "Noch was?",
+	"ui-response": "Antwort",
+	"ui-back-button": "Züruck zur Chat-Antwort",
+	"ui-stopwords": {
+	  "*comment*": "Stopwords need to be lowercase only.",
+	  "nein": "nein",
+	  "stop": "stop",
+	  "stopp": "stopp",
+	  "abbrechen": "abbrechen",
+	  "nichts": "nichts",
+	  "danke": "danke",
+	  "nicht": "nicht",
+	  "gar nicht": "gar nicht"
+	},
+	"ui-export-trigger": "export",
+	"ui-export-menu-copy": "Antwort kopieren",
+	"ui-export-menu-save": "Antwort speichern",
+	"ui-export-menu-copy-chat": "Chat kopieren",
+	"ui-export-menu-save-chat": "Chat speichern",
+	"ui-export-menu-preview-chat": "Chat als Vorschau",
+	"ui-export-menu-translate-chat": "Chat übersetzen",
+	"ui-export-menu-exit": "Beenden"
   }
 }</string>
 			</dict>
@@ -652,6 +655,217 @@ If you have access to it, replace this with gpt-4.</string>
 				</dict>
 				<key>WFVariableName</key>
 				<string>Response</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getvalueforkey</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>18BAA2DD-B63E-4042-BB4C-A661C76DD19F</string>
+				<key>WFDictionaryKey</key>
+				<string>ui-back-button</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>i18n-registery</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Wörterbuchwert</string>
+						<key>OutputUUID</key>
+						<string>18BAA2DD-B63E-4042-BB4C-A661C76DD19F</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Back Button</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>FC33E323-0DAA-4094-9282-7BA8D199DDD2</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{934, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Back Button</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+	&lt;meta charset="UTF-8" /&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+	&lt;title&gt;Chat Browser&lt;/title&gt;
+	&lt;style&gt;
+	  body,
+	  html {
+		margin: 0;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		font-family: system-ui;
+	  }
+	  nav {
+		height: 3rem;
+		/* Background Color of Shortcuts Overview */
+		background-color: rgb(235, 235, 237); 
+		display: flex;
+		align-items: center;
+		padding: 0 1rem;
+		box-sizing: border-box;
+		border-bottom: 1px solid white;
+	  }
+	  nav button {
+		font-size: small;
+		padding: unset 2em;
+		cursor: pointer;
+	  }
+	  iframe {
+		flex-grow: 1;
+		border: none;
+		width: 100%;
+	  }
+	&lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+	&lt;iframe id="miniBrowser"&gt;&lt;/iframe&gt;
+	&lt;nav&gt;
+	  &lt;button id="backBtn"&gt;￼&lt;/button&gt;
+	&lt;/nav&gt;
+	&lt;script&gt;
+	  function base64ToUtf8(base64) {
+		const binary = atob(base64);
+		const bytes = Uint8Array.from(binary, (c) =&gt; c.charCodeAt(0));
+		const decoder = new TextDecoder('utf-8');
+		return decoder.decode(bytes);
+	  }
+	  
+	  function loadInIframe(base64Code) {
+		const htmlCode = base64ToUtf8(base64Code);
+		
+		// Replace the iFrame with a new one to reset
+		let iFrameElement = document.createElement('iframe');
+		iFrameElement.id = 'miniBrowser';
+		document.getElementById('miniBrowser').replaceWith(iFrameElement);
+
+		// In das iframe-Dokument schreiben
+		const doc =
+		  document.getElementById('miniBrowser').contentDocument ||
+		  document.getElementById('miniBrowser').contentWindow.document;
+		doc.open();
+		doc.write(htmlCode);
+		doc.close();
+	  }
+	  
+	  const base64Code = `</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Text</string>
+						<key>OutputUUID</key>
+						<string>FC33E323-0DAA-4094-9282-7BA8D199DDD2</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Mini Brower Start</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>7D6A7D76-E97E-44D8-A6AB-1D585D242059</string>
+				<key>WFTextActionText</key>
+				<string>`;
+	  
+	  document.getElementById('backBtn').addEventListener('click', () =&gt; {
+		loadInIframe(base64Code);
+	  });
+	  
+	  // document.addEventListener('load', function () {
+		loadInIframe(base64Code);
+	  // });
+	  
+	&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Text</string>
+						<key>OutputUUID</key>
+						<string>7D6A7D76-E97E-44D8-A6AB-1D585D242059</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Mini Browser End</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1093,7 +1307,7 @@ body ul.linklist {
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>WFVariableName</key>
-				<string>HTML Template</string>
+				<string>Response Template</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1777,6 +1991,8 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>6DD3AB9E-8B13-42E6-869F-7DA10EC49433</string>
+				<key>UUID</key>
+				<string>D00EDEF7-47D1-4AB1-A367-35B9452438C3</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -1788,6 +2004,8 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>9136D05B-5257-4D16-B92C-F96204FCADB6</string>
+				<key>UUID</key>
+				<string>0B0BACF4-083B-4257-A669-C08B977C5C20</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -1799,6 +2017,8 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>A1515850-B5FB-47F4-B8AB-BFD58360A196</string>
+				<key>UUID</key>
+				<string>7628FB63-C163-477B-A86C-2475E48E3E4E</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -2163,6 +2383,8 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>5252CA85-A956-450F-9D24-C857A8E06463</string>
+				<key>UUID</key>
+				<string>461E2D3E-D612-480C-855C-73A3E778CA22</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -2454,6 +2676,8 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>7E106EB3-4353-4B5C-9898-7F1AE575F898</string>
+				<key>UUID</key>
+				<string>1818233D-E3B5-463F-91CD-D32EDC6292D7</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -2476,6 +2700,8 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>DEC5E383-25C9-40AB-BF66-13E0B0CBCF4F</string>
+				<key>UUID</key>
+				<string>785A9ECD-BE7A-43A9-83EF-E87BA4423B1B</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -2738,12 +2964,12 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 					<key>isSelf</key>
 					<false/>
 					<key>workflowIdentifier</key>
-					<string>08981C4A-A6CD-4884-ABEC-43BC75D55682</string>
+					<string>2DB4BF59-D8AF-478F-AB64-0341D0E16EE4</string>
 					<key>workflowName</key>
-					<string>S-GPT Encoder (I18n)</string>
+					<string>Chat Encoder</string>
 				</dict>
 				<key>WFWorkflowName</key>
-				<string>S-GPT Encoder (I18n)</string>
+				<string>Chat Encoder</string>
 			</dict>
 		</dict>
 		<dict>
@@ -3358,12 +3584,12 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 					<key>isSelf</key>
 					<false/>
 					<key>workflowIdentifier</key>
-					<string>08981C4A-A6CD-4884-ABEC-43BC75D55682</string>
+					<string>2DB4BF59-D8AF-478F-AB64-0341D0E16EE4</string>
 					<key>workflowName</key>
-					<string>S-GPT Encoder (I18n)</string>
+					<string>Chat Encoder</string>
 				</dict>
 				<key>WFWorkflowName</key>
-				<string>S-GPT Encoder (I18n)</string>
+				<string>Chat Encoder</string>
 			</dict>
 		</dict>
 		<dict>
@@ -3383,7 +3609,7 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFCommentActionText</key>
-				<string>Add link list to footer</string>
+				<string>Compile search results for footnote list</string>
 			</dict>
 		</dict>
 		<dict>
@@ -3510,7 +3736,7 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>CustomOutputName</key>
-				<string>URL II</string>
+				<string>URL</string>
 				<key>UUID</key>
 				<string>A8AE2003-DB47-4694-99A9-80B820546C04</string>
 				<key>WFDictionaryKey</key>
@@ -3534,6 +3760,8 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>UUID</key>
+				<string>96ABCE95-392B-4AA9-B870-A4B8BF000B25</string>
 				<key>WFTextActionText</key>
 				<dict>
 					<key>Value</key>
@@ -3550,7 +3778,7 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 							<key>{32, 1}</key>
 							<dict>
 								<key>OutputName</key>
-								<string>URL II</string>
+								<string>URL</string>
 								<key>OutputUUID</key>
 								<string>A8AE2003-DB47-4694-99A9-80B820546C04</string>
 								<key>Type</key>
@@ -3594,6 +3822,8 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>UUID</key>
+				<string>90096456-3CEC-4D2C-8C64-3C8810290C80</string>
 				<key>WFTextActionText</key>
 				<dict>
 					<key>Value</key>
@@ -3634,6 +3864,8 @@ The bug: https://cdn.macstories.net/cleanshot-2023-04-13-at-02-36-30-2x-16813462
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>UUID</key>
+				<string>B3F4B87D-F1E2-4DFD-AB9E-506ABD39FECF</string>
 				<key>WFTextActionText</key>
 				<dict>
 					<key>Value</key>
@@ -3746,7 +3978,7 @@ We're not showing it in playlist mode because another alert is shown.</string>
 								<key>Type</key>
 								<string>Variable</string>
 								<key>VariableName</key>
-								<string>HTML Template</string>
+								<string>Response Template</string>
 							</dict>
 							<key>{2, 1}</key>
 							<dict>
@@ -3785,6 +4017,99 @@ We're not showing it in playlist mode because another alert is shown.</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.base64encode</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>B2290F75-A7F9-44B4-9CA1-0C276FE39D5E</string>
+				<key>WFBase64LineBreakMode</key>
+				<string>None</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Text</string>
+						<key>OutputUUID</key>
+						<string>3C38D470-2020-4281-8CC5-5F5DF200BD0E</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Base64-Codiert</string>
+						<key>OutputUUID</key>
+						<string>B2290F75-A7F9-44B4-9CA1-0C276FE39D5E</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Response HTML (Base64)</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>CustomOutputName</key>
+				<string>Response in Minibrowser</string>
+				<key>UUID</key>
+				<string>0CDE7FA6-1B6E-43D7-A281-C090AF4031AF</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Mini Brower Start</string>
+							</dict>
+							<key>{1, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Response HTML (Base64)</string>
+							</dict>
+							<key>{2, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Mini Browser End</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼￼￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.setitemname</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -3795,9 +4120,9 @@ We're not showing it in playlist mode because another alert is shown.</string>
 					<key>Value</key>
 					<dict>
 						<key>OutputName</key>
-						<string>Text</string>
+						<string>Response in Minibrowser</string>
 						<key>OutputUUID</key>
-						<string>3C38D470-2020-4281-8CC5-5F5DF200BD0E</string>
+						<string>0CDE7FA6-1B6E-43D7-A281-C090AF4031AF</string>
 						<key>Type</key>
 						<string>ActionOutput</string>
 					</dict>
@@ -3866,6 +4191,8 @@ We're not showing it in playlist mode because another alert is shown.</string>
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>C38F06C5-CE61-4608-A81C-90ECDE82474A</string>
+				<key>UUID</key>
+				<string>65105DB8-1830-4C04-AC7E-1F285CD92AD5</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -3947,12 +4274,12 @@ We're not showing it in playlist mode because another alert is shown.</string>
 					<key>isSelf</key>
 					<false/>
 					<key>workflowIdentifier</key>
-					<string>08981C4A-A6CD-4884-ABEC-43BC75D55682</string>
+					<string>2DB4BF59-D8AF-478F-AB64-0341D0E16EE4</string>
 					<key>workflowName</key>
-					<string>S-GPT Encoder (I18n)</string>
+					<string>Chat Encoder</string>
 				</dict>
 				<key>WFWorkflowName</key>
-				<string>S-GPT Encoder (I18n)</string>
+				<string>Chat Encoder</string>
 			</dict>
 		</dict>
 		<dict>
@@ -3992,12 +4319,12 @@ We're not showing it in playlist mode because another alert is shown.</string>
 					<key>isSelf</key>
 					<false/>
 					<key>workflowIdentifier</key>
-					<string>08981C4A-A6CD-4884-ABEC-43BC75D55682</string>
+					<string>2DB4BF59-D8AF-478F-AB64-0341D0E16EE4</string>
 					<key>workflowName</key>
-					<string>S-GPT Encoder (I18n)</string>
+					<string>Chat Encoder</string>
 				</dict>
 				<key>WFWorkflowName</key>
-				<string>S-GPT Encoder (I18n)</string>
+				<string>Chat Encoder</string>
 			</dict>
 		</dict>
 		<dict>
@@ -4659,6 +4986,8 @@ We're not showing it in playlist mode because another alert is shown.</string>
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>69F0EF89-1F67-4F8E-99B4-D62E6224B449</string>
+				<key>UUID</key>
+				<string>D0A2F580-3B13-427D-B2C0-FDF82113D676</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -4681,6 +5010,8 @@ We're not showing it in playlist mode because another alert is shown.</string>
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>709DB1A4-C528-4424-8F57-746D14A23103</string>
+				<key>UUID</key>
+				<string>C7F1FF15-92D0-4229-B9C5-23A169834E7E</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -4692,6 +5023,8 @@ We're not showing it in playlist mode because another alert is shown.</string>
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>64B46E68-8DB3-41A9-BFCA-C5A507311D42</string>
+				<key>UUID</key>
+				<string>B402E705-8BE8-4A5C-BB09-80C39C1CCC4B</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -4733,12 +5066,12 @@ We're not showing it in playlist mode because another alert is shown.</string>
 					<key>isSelf</key>
 					<false/>
 					<key>workflowIdentifier</key>
-					<string>08981C4A-A6CD-4884-ABEC-43BC75D55682</string>
+					<string>2DB4BF59-D8AF-478F-AB64-0341D0E16EE4</string>
 					<key>workflowName</key>
-					<string>S-GPT Encoder (I18n)</string>
+					<string>Chat Encoder</string>
 				</dict>
 				<key>WFWorkflowName</key>
-				<string>S-GPT Encoder (I18n)</string>
+				<string>Chat Encoder</string>
 			</dict>
 		</dict>
 		<dict>
@@ -5637,6 +5970,8 @@ We need to subtract -1 from the total count of user messages.</string>
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>UUID</key>
+				<string>8BBEF346-CAFA-4095-88FE-BBB9C502F4B0</string>
 				<key>WFTextActionText</key>
 				<dict>
 					<key>Value</key>
@@ -6698,6 +7033,8 @@ We need to subtract -1 from the total count of user messages.</string>
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>21F572C8-A6F1-40D2-B7FC-3D365AF5B943</string>
+				<key>UUID</key>
+				<string>CB49EDB0-6AE8-4756-ABCB-5D4D07C654AA</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -7027,6 +7364,8 @@ We need to subtract -1 from the total count of user messages.</string>
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>3C47F5D0-99F4-409A-8062-6C153D4228A9</string>
+				<key>UUID</key>
+				<string>7ACFFA14-4C8F-46E3-AD1C-6B66897C072F</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -7194,12 +7533,12 @@ We need to subtract -1 from the total count of user messages.</string>
 					<key>isSelf</key>
 					<false/>
 					<key>workflowIdentifier</key>
-					<string>08981C4A-A6CD-4884-ABEC-43BC75D55682</string>
+					<string>2DB4BF59-D8AF-478F-AB64-0341D0E16EE4</string>
 					<key>workflowName</key>
-					<string>S-GPT Encoder (I18n)</string>
+					<string>Chat Encoder</string>
 				</dict>
 				<key>WFWorkflowName</key>
-				<string>S-GPT Encoder (I18n)</string>
+				<string>Chat Encoder</string>
 			</dict>
 		</dict>
 		<dict>
@@ -7370,6 +7709,8 @@ We need to subtract -1 from the total count of user messages.</string>
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>UUID</key>
+				<string>4E8D7CE6-C366-464A-873E-73F4236C6307</string>
 				<key>WFTextActionText</key>
 				<dict>
 					<key>Value</key>
@@ -7430,6 +7771,8 @@ We need to subtract -1 from the total count of user messages.</string>
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>UUID</key>
+				<string>CE88668A-FBD8-44A8-B427-4F0B6B8F39CF</string>
 				<key>WFTextActionText</key>
 				<dict>
 					<key>Value</key>
@@ -7470,6 +7813,8 @@ We need to subtract -1 from the total count of user messages.</string>
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>UUID</key>
+				<string>A41BD9FA-0ACE-473D-AF56-940C5A43360D</string>
 				<key>WFTextActionText</key>
 				<dict>
 					<key>Value</key>
@@ -7567,6 +7912,8 @@ We need to subtract -1 from the total count of user messages.</string>
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>CustomOutputName</key>
+				<string>Response HTML</string>
 				<key>UUID</key>
 				<string>73F5FD9C-07BD-4245-8CC3-830AEC304141</string>
 				<key>WFTextActionText</key>
@@ -7580,7 +7927,7 @@ We need to subtract -1 from the total count of user messages.</string>
 								<key>Type</key>
 								<string>Variable</string>
 								<key>VariableName</key>
-								<string>HTML Template</string>
+								<string>Response Template</string>
 							</dict>
 							<key>{2, 1}</key>
 							<dict>
@@ -7618,19 +7965,112 @@ We need to subtract -1 from the total count of user messages.</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.setitemname</string>
+			<string>is.workflow.actions.base64encode</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>UUID</key>
-				<string>F2CD2B67-1349-4A85-A9CD-802422C141AC</string>
+				<string>F57D6919-23CA-4CB0-B1CC-B55BD6B99618</string>
+				<key>WFBase64LineBreakMode</key>
+				<string>None</string>
 				<key>WFInput</key>
 				<dict>
 					<key>Value</key>
 					<dict>
 						<key>OutputName</key>
-						<string>Text</string>
+						<string>Response HTML</string>
 						<key>OutputUUID</key>
 						<string>73F5FD9C-07BD-4245-8CC3-830AEC304141</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Base64-Codiert</string>
+						<key>OutputUUID</key>
+						<string>F57D6919-23CA-4CB0-B1CC-B55BD6B99618</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Response HTML (Base64)</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>CustomOutputName</key>
+				<string>Response in Minibrowser</string>
+				<key>UUID</key>
+				<string>D128679C-6EDA-4767-AF7E-66D4D970E2B5</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Mini Brower Start</string>
+							</dict>
+							<key>{1, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Response HTML (Base64)</string>
+							</dict>
+							<key>{2, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Mini Browser End</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼￼￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setitemname</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>AF21A5A6-BEE4-4511-BB20-50B3C2C987D5</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Response in Minibrowser</string>
+						<key>OutputUUID</key>
+						<string>D128679C-6EDA-4767-AF7E-66D4D970E2B5</string>
 						<key>Type</key>
 						<string>ActionOutput</string>
 					</dict>
@@ -7677,7 +8117,7 @@ We need to subtract -1 from the total count of user messages.</string>
 								<key>OutputName</key>
 								<string>Umbenanntes Objekt</string>
 								<key>OutputUUID</key>
-								<string>F2CD2B67-1349-4A85-A9CD-802422C141AC</string>
+								<string>AF21A5A6-BEE4-4511-BB20-50B3C2C987D5</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 							</dict>
@@ -7697,6 +8137,8 @@ We need to subtract -1 from the total count of user messages.</string>
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>57A0F3ED-1704-406F-AD44-82106A8CC465</string>
+				<key>UUID</key>
+				<string>9A147EF2-0FBC-47A8-9ED3-DBB0BB0E8578</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -7776,12 +8218,12 @@ We need to subtract -1 from the total count of user messages.</string>
 					<key>isSelf</key>
 					<false/>
 					<key>workflowIdentifier</key>
-					<string>08981C4A-A6CD-4884-ABEC-43BC75D55682</string>
+					<string>2DB4BF59-D8AF-478F-AB64-0341D0E16EE4</string>
 					<key>workflowName</key>
-					<string>S-GPT Encoder (I18n)</string>
+					<string>Chat Encoder</string>
 				</dict>
 				<key>WFWorkflowName</key>
-				<string>S-GPT Encoder (I18n)</string>
+				<string>Chat Encoder</string>
 			</dict>
 		</dict>
 		<dict>
@@ -7819,12 +8261,12 @@ We need to subtract -1 from the total count of user messages.</string>
 					<key>isSelf</key>
 					<false/>
 					<key>workflowIdentifier</key>
-					<string>08981C4A-A6CD-4884-ABEC-43BC75D55682</string>
+					<string>2DB4BF59-D8AF-478F-AB64-0341D0E16EE4</string>
 					<key>workflowName</key>
-					<string>S-GPT Encoder (I18n)</string>
+					<string>Chat Encoder</string>
 				</dict>
 				<key>WFWorkflowName</key>
-				<string>S-GPT Encoder (I18n)</string>
+				<string>Chat Encoder</string>
 			</dict>
 		</dict>
 		<dict>
@@ -7888,6 +8330,8 @@ We need to subtract -1 from the total count of user messages.</string>
 			<dict>
 				<key>GroupingIdentifier</key>
 				<string>C9C697FF-08B1-40F1-98FD-F5E5EAACCFA2</string>
+				<key>UUID</key>
+				<string>16B012EE-A0F6-475E-BC2C-152A97BE5E8D</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -7907,7 +8351,7 @@ We need to subtract -1 from the total count of user messages.</string>
 		</dict>
 	</array>
 	<key>WFWorkflowClientVersion</key>
-	<string>3612.0.2.1</string>
+	<string>3612.0.1.1</string>
 	<key>WFWorkflowHasOutputFallback</key>
 	<false/>
 	<key>WFWorkflowHasShortcutInputVariables</key>
@@ -7973,10 +8417,9 @@ We need to subtract -1 from the total count of user messages.</string>
 	<array/>
 	<key>WFWorkflowTypes</key>
 	<array>
-		<string>QuickActions</string>
-		<string>Watch</string>
 		<string>MenuBar</string>
 		<string>ActionExtension</string>
+		<string>Watch</string>
 	</array>
 </dict>
 </plist>
